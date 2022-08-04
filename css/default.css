@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #d1dbf8;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cards-container {
+  width: 75rem;
+  max-width: 75rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card-content {
+  background-color: #ffff;
+  text-align: center;
+  padding: 30px 15px;
+  border-radius: 2%;
+  box-shadow: 0 0 10px #aaa;
+  cursor: pointer;
+}
+
+.card-content:hover {
+  transform: scale(1.02);
+}
+
+.circle-image {
+  background-color: #aaa;
+  border-radius: 50%;
+  border: solid 5px #d1dbf8;
+  display: block;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.circle-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.info {
+  margin: 15px 0 15px;
+}
+
+.info p + p {
+  margin-top: 10px;
+}
+
+.info button {
+  margin-top: 25px;
+  width: 150px;
+  padding: 10px;
+  background-color: #acb9e2;
+  border: none;
+  border-radius: 30px;
+  color: #ffff;
+  box-shadow: 1px 1px 5px #aaa;
+}
+
+/* ADD NEW CARD */
+
+.card-add-news {
+  box-shadow: 0 0 2px rgb(255, 255, 255);
+  border-radius: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: #ffffff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  border: solid 4px #c8d3f5;
+  margin: 0 auto;
+}
+
+.circle:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.circle h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  color: #acb9e2;
+}
+
+.add-new h2 {
+  margin-top: 15px;
+}
