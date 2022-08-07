@@ -48,6 +48,10 @@
   );
 }
 
+.header_modal p {
+  margin-top: 25px;
+}
+
 .modal_info {
   background-color: aliceblue;
 }
