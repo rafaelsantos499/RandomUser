@@ -11,20 +11,47 @@ body {
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  margin-top: 15%;
+}
+
+.total {
+  display: grid;
+  grid-template-columns: 288px 1fr;
+  gap: 15px;
+}
+
+.card-add-news {
+  height: 374px;
+  grid-area: 1/1;
 }
 
 .cards-container {
-  width: 75rem;
-  max-width: 75rem;
+  width: 1000px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  opacity: 0;
+  animation: card 1s forwards;
+}
+
+@media (max-width: 500px) {
+  .total {
+    grid-template-columns: 1fr;
+  }
+  .cards-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+@keyframes card {
+  to {
+    opacity: initial;
+  }
 }
 
 .card-content {
@@ -34,10 +61,17 @@ body {
   border-radius: 2%;
   box-shadow: 0 0 10px #aaa;
   cursor: pointer;
+  position: relative;
 }
 
 .card-content:hover {
   transform: scale(1.02);
+}
+
+.gender {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .circle-image {
@@ -75,6 +109,11 @@ body {
   border-radius: 30px;
   color: #ffff;
   box-shadow: 1px 1px 5px #aaa;
+  cursor: pointer;
+}
+
+.info button:hover {
+  box-shadow: 0 0 10px #aaa;
 }
 
 /* ADD NEW CARD */
@@ -113,4 +152,7 @@ body {
 
 .add-new h2 {
   margin-top: 15px;
+}
+.date {
+  display: none;
 }
